@@ -48,7 +48,7 @@ async function main(controller: string) {
   }
   console.log(`There are ${chainViewResponse.n_loans} borrower(s) borrowing a total of ${(chainViewResponse.total / (powa(chainViewResponse.decimalsb)))} ${chainViewResponse.symbolb}`)
   if (chainViewResponse.collat == CRVUSD) {
-    console.log(`${chainViewResponse.symbolb} price: ${chainViewResponse.price/powa(BigInt(18))} crvUSD`)
+    console.log(`${chainViewResponse.symbolb} price: ${(10**18)/Number(chainViewResponse.price)} crvUSD`)
   }
   else 
   {
